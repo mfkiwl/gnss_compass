@@ -10,7 +10,6 @@
       <TargetName>rt-thread</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>5060750::V5.06 update 6 (build 750)::ARMCC</pArmCC>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
@@ -340,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32H750xx, USE_HAL_DRIVER, RT_USING_ARM_LIBC</Define>
               <Undefine></Undefine>
-              <IncludePath>applications;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m7;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board;board\port;board\CubeMX_Config\Core\Inc;libraries\drivers;libraries\drivers\include;libraries\drivers\include\config;rt-thread\components\dfs\include;rt-thread\components\dfs\filesystems\devfs;rt-thread\components\finsh;.;rt-thread\include;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common;libraries\samples;libraries\STM32H7xx_HAL\STM32H7xx_HAL_Driver\Inc;libraries\STM32H7xx_HAL\CMSIS\Device\ST\STM32H7xx\Include;libraries\STM32H7xx_HAL\CMSIS\Include</IncludePath>
+              <IncludePath>applications;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m7;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board;board\port;board\CubeMX_Config\Core\Inc;libraries\drivers;libraries\drivers\include;libraries\drivers\include\config;rt-thread\components\dfs\include;rt-thread\components\dfs\filesystems\devfs;rt-thread\components\finsh;.;rt-thread\include;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common;libraries\samples;libraries\STM32H7xx_HAL\STM32H7xx_HAL_Driver\Inc;libraries\STM32H7xx_HAL\CMSIS\Device\ST\STM32H7xx\Include;libraries\STM32H7xx_HAL\CMSIS\Include;.\applications\ubx</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,6 +387,16 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>applications\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>thread_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\thread_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>thread_rtk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\thread_rtk.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -857,6 +866,16 @@
               <FileName>stm32h7xx_hal_sdram.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32H7xx_HAL\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_sdram.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ubx</GroupName>
+          <Files>
+            <File>
+              <FileName>ubx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\ubx\ubx.c</FilePath>
             </File>
           </Files>
         </Group>

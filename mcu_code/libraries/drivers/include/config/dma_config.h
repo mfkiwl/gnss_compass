@@ -27,6 +27,15 @@ extern "C" {
 #define UART1_RX_DMA_IRQ                 DMA1_Stream0_IRQn
 #endif
 
+#if defined(BSP_UART6_RX_USING_DMA) && !defined(UART6_RX_DMA_INSTANCE)
+#define UART6_DMA_RX_IRQHandler          DMA1_Stream5_IRQHandler
+#define UART6_RX_DMA_RCC                 RCC_AHB1ENR_DMA1EN
+#define UART6_RX_DMA_INSTANCE            DMA1_Stream5
+#define UART6_RX_DMA_REQUEST             DMA_REQUEST_USART6_RX
+#define UART6_RX_DMA_IRQ                 DMA1_Stream5_IRQn
+#endif
+
+
 /* DMA1 stream1 */
 #if defined(BSP_UART1_TX_USING_DMA) && !defined(UART1_TX_DMA_INSTANCE)
 #define UART1_DMA_TX_IRQHandler          DMA1_Stream1_IRQHandler

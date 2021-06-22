@@ -1348,6 +1348,7 @@ int rt_hw_usart_init(void)
 {
     rt_size_t obj_num = sizeof(uart_obj) / sizeof(struct stm32_uart);
     struct serial_configure config = RT_SERIAL_CONFIG_DEFAULT;
+    config.bufsz = 128;
     rt_err_t result = 0;
 
     stm32_uart_get_dma_config();
